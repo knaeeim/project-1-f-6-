@@ -1,5 +1,7 @@
 import React from 'react';
 import Products from './Products';
+import { FaCartArrowDown } from 'react-icons/fa';
+import { IoBagCheckOutline } from 'react-icons/io5';
 
 const Product = ({ product, handleCartUpdate }) => {
     const { name, category, price, image, rating, description } = product;
@@ -25,8 +27,8 @@ const Product = ({ product, handleCartUpdate }) => {
                         <div className="badge badge-success">$ {price}</div>
                     </div>
                     <div className='flex gap-4 w-full mt-5'>
-                        <button onClick={() => handleCartUpdate(product)} className='btn btn-outline btn-success w-[50%]'>Add to Cart</button>
-                        <button className='btn btn-outline btn-secondary w-[50%]'>Buy Now</button>
+                        <button onClick={() => handleCartUpdate(product)} className='btn btn-outline btn-success w-[50%]'> <FaCartArrowDown className='mr-1' size={22}/> Add to Cart</button>
+                        <button className='btn btn-outline btn-secondary w-[50%]'> <IoBagCheckOutline size={22}/> Buy Now</button>
                     </div>
                 </div>
             </div>

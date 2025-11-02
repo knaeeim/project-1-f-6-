@@ -14,7 +14,7 @@ const Products = ({ handleCartUpdate }) => {
     return (
         <div className='grid grid-cols-3 justify-items-center gap-y-10'>
             {
-                products.map((product) => <Product handleCartUpdate={handleCartUpdate} product={product}></Product>)
+                products.map((product) => <Product key={product.id} handleCartUpdate={handleCartUpdate} product={product}></Product>)
             }
         </div>
     );
